@@ -1,0 +1,8 @@
+.lis{
+    width: 450px;
+    display: flex;
+    font-size: larger;
+    justify-content: space-between;
+    margin-top: 15px;
+    border: 1px solid orange;
+}
