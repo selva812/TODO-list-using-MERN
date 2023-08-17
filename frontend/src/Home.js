@@ -5,19 +5,21 @@ import { useState ,useEffect} from "react";
 import axios from "axios"
 function Home() {
     const [Activity,setactivity]=useState("")
-    const [items,setitems]=useState([])
+    const [items,setitems]=useState([]) 
     useEffect(()=>{
-       axios.get("http://localhost:5000/")
+       axios.get("http://localhost:5000")
         .then((result)=>{setitems(result.data)
          console.log(result)
         })
         .catch(err=>console.log(err))
-    },[Activity])
+    },[])
     const handlesubmit=(e)=>{
         e.preventDefault()
         axios.post("http://localhost:5000/save",{Activity})
-        .then(()=>console.log("saved successfully"))
+        .then(()=>{console.log("saved successfully")
+         })
         setactivity("")
+        window.location.reload()
     }
     return (
     <div className='container d-flex justify-content-center align-items-center flex-column'>

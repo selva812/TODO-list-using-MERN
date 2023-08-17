@@ -22,7 +22,7 @@ export default function Update() {
     <div className='d-flex justify-content-center align-items-center vh-100 flex-column'>
         <h1>Update </h1>
         <form action="" className="form-label d-flex" onSubmit={(e)=>handleclick(e)}>
-            <input type="text" className="form-control" value={Activity} 
+            <input type="text" className="form-control" autoFocus value={Activity} 
             onChange={(e)=>setactivity(e.target.value)}/>
             <button className="btn btn-success" onClick={(e)=>handleclick(e)}>+</button>
         </form>
